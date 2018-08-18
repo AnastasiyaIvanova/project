@@ -34,3 +34,4 @@ Route::group(['middleware' => ['web']], function () {
   Route::delete('/task/{task}', 'TaskController@destroy');
 
   Route::auth();
+}
