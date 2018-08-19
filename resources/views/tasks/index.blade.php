@@ -57,9 +57,10 @@
 
                                         <!-- Task Delete Button -->
                                         <td>
-                                            <form action="{{ route('tasks.destroy', [$task => 'id']) }}" method="POST">
+                                            <form action="{{route('tasks.destroy', $task->id)}}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}
+                                                <input type="hidden" name="_method" value="DELETE">
 
                                                 <button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger">
                                                     <i class="fa fa-btn fa-trash"></i>Delete
